@@ -50,15 +50,15 @@ class ViewController: UIViewController {
     }
     
     private func currentTime() -> String {
-        var getDate = Date()
+        let getDate = Date()
         dateFormatter.dateFormat = "dd.MM.yyyy HH:mm:ss"
-        var formatteddate = dateFormatter.string(from: getDate)
+        let formatteddate = dateFormatter.string(from: getDate)
         return formatteddate
     }
     private func currentValue() -> String {
         return "Значение счётчика: \(value)"
     }
     private func addToHistory(message: String) {
-        historyValueTextView.text += "\n\(currentTime()) \(message)\n"
+        historyValueTextView.text += "\n\(currentTime()): \(message)\n"
     }
 }

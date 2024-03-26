@@ -16,10 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnv-l9-Lff">
-                                <rect key="frame" x="54" y="570" width="96" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnv-l9-Lff">
+                                <rect key="frame" x="54" y="557" width="96" height="105"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="J0k-rl-bwv"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="+">
@@ -29,10 +31,12 @@
                                     <action selector="increaseByOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJi-KM-rd4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgS-b3-Yfa">
-                                <rect key="frame" x="243" y="570" width="96" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgS-b3-Yfa">
+                                <rect key="frame" x="243" y="557" width="96" height="105"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="gjd-cm-fHc"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="-">
@@ -42,9 +46,24 @@
                                     <action selector="decreaseByOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Cg-UP-vDS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4t-pL-a4D">
-                                <rect key="frame" x="70" y="700" width="253" height="105"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="История изменений:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sa-si-vcN">
+                                <rect key="frame" x="16" y="175" width="361" height="334"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Значение счётчика: 42" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PU-G2-AZk">
+                                <rect key="frame" x="16" y="120" width="361" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" systemColor="labelColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4t-pL-a4D">
+                                <rect key="frame" x="70" y="713" width="253" height="105"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Сброс">
@@ -54,27 +73,24 @@
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AD7-75-q84"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="История изменений:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sa-si-vcN">
-                                <rect key="frame" x="16" y="180" width="361" height="355"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Значение счётчика: 42" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PU-G2-AZk">
-                                <rect key="frame" x="16" y="120" width="361" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <color key="highlightedColor" systemColor="labelColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="c4t-pL-a4D" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="EHB-NK-LWc"/>
+                            <constraint firstItem="5PU-G2-AZk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GHQ-Cu-Lw2"/>
+                            <constraint firstItem="5PU-G2-AZk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="61" id="IGg-dt-5bU"/>
+                            <constraint firstItem="bnv-l9-Lff" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="LIW-fR-J2G"/>
+                            <constraint firstItem="bnv-l9-Lff" firstAttribute="top" secondItem="5sa-si-vcN" secondAttribute="bottom" constant="48" id="Mk4-a5-G6V"/>
+                            <constraint firstItem="5sa-si-vcN" firstAttribute="centerX" secondItem="c4t-pL-a4D" secondAttribute="centerX" id="O5E-9b-wPa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bgS-b3-Yfa" secondAttribute="trailing" constant="54" id="RRu-EQ-JLf"/>
+                            <constraint firstItem="5PU-G2-AZk" firstAttribute="leading" secondItem="5sa-si-vcN" secondAttribute="leading" id="TL6-tW-UkG"/>
+                            <constraint firstItem="5PU-G2-AZk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VCt-d4-SHI"/>
+                            <constraint firstItem="5sa-si-vcN" firstAttribute="top" secondItem="5PU-G2-AZk" secondAttribute="bottom" constant="21" id="aC1-HU-QkL"/>
+                            <constraint firstItem="bgS-b3-Yfa" firstAttribute="baseline" secondItem="bnv-l9-Lff" secondAttribute="baseline" id="iA5-zY-IUF"/>
+                            <constraint firstItem="c4t-pL-a4D" firstAttribute="top" secondItem="bnv-l9-Lff" secondAttribute="bottom" constant="51" id="jov-vb-vw4"/>
+                            <constraint firstItem="5PU-G2-AZk" firstAttribute="trailing" secondItem="5sa-si-vcN" secondAttribute="trailing" id="n2F-uH-TAC"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="countValueLabel" destination="5PU-G2-AZk" id="8VZ-Ui-RbR"/>
