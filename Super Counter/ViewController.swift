@@ -36,7 +36,6 @@ class ViewController: UIViewController {
     
     
     
-    
     @IBAction func increaseByOne(_ sender: Any) {
         value += 1
         countValueLabel.text = "Значение счётчика: \(value)"
