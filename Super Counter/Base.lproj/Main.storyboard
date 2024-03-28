@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Super_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnv-l9-Lff">
+                                <rect key="frame" x="54" y="557" width="96" height="105"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="J0k-rl-bwv"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+">
+                                    <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="70"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="increaseByOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJi-KM-rd4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgS-b3-Yfa">
+                                <rect key="frame" x="243" y="557" width="96" height="105"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="gjd-cm-fHc"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="-">
+                                    <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="70"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="decreaseByOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Cg-UP-vDS"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="История изменений:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sa-si-vcN">
+                                <rect key="frame" x="16" y="175" width="361" height="334"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Значение счётчика: 42" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PU-G2-AZk">
+                                <rect key="frame" x="16" y="120" width="361" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" systemColor="labelColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4t-pL-a4D">
+                                <rect key="frame" x="70" y="713" width="253" height="105"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Сброс">
+                                    <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="70"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AD7-75-q84"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="c4t-pL-a4D" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="EHB-NK-LWc"/>
+                            <constraint firstItem="5PU-G2-AZk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GHQ-Cu-Lw2"/>
+                            <constraint firstItem="5PU-G2-AZk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="61" id="IGg-dt-5bU"/>
+                            <constraint firstItem="bnv-l9-Lff" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="LIW-fR-J2G"/>
+                            <constraint firstItem="bnv-l9-Lff" firstAttribute="top" secondItem="5sa-si-vcN" secondAttribute="bottom" constant="48" id="Mk4-a5-G6V"/>
+                            <constraint firstItem="5sa-si-vcN" firstAttribute="centerX" secondItem="c4t-pL-a4D" secondAttribute="centerX" id="O5E-9b-wPa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bgS-b3-Yfa" secondAttribute="trailing" constant="54" id="RRu-EQ-JLf"/>
+                            <constraint firstItem="5PU-G2-AZk" firstAttribute="leading" secondItem="5sa-si-vcN" secondAttribute="leading" id="TL6-tW-UkG"/>
+                            <constraint firstItem="5PU-G2-AZk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VCt-d4-SHI"/>
+                            <constraint firstItem="5sa-si-vcN" firstAttribute="top" secondItem="5PU-G2-AZk" secondAttribute="bottom" constant="21" id="aC1-HU-QkL"/>
+                            <constraint firstItem="bgS-b3-Yfa" firstAttribute="baseline" secondItem="bnv-l9-Lff" secondAttribute="baseline" id="iA5-zY-IUF"/>
+                            <constraint firstItem="c4t-pL-a4D" firstAttribute="top" secondItem="bnv-l9-Lff" secondAttribute="bottom" constant="51" id="jov-vb-vw4"/>
+                            <constraint firstItem="5PU-G2-AZk" firstAttribute="trailing" secondItem="5sa-si-vcN" secondAttribute="trailing" id="n2F-uH-TAC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countValueLabel" destination="5PU-G2-AZk" id="8VZ-Ui-RbR"/>
+                        <outlet property="decreaseValueButton" destination="bgS-b3-Yfa" id="d1Q-qM-s6Q"/>
+                        <outlet property="historyValueTextView" destination="5sa-si-vcN" id="mAi-5c-80T"/>
+                        <outlet property="increaseValueButton" destination="bnv-l9-Lff" id="npl-6w-WI1"/>
+                        <outlet property="resetValueButton" destination="c4t-pL-a4D" id="DFN-ZO-6qW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55.725190839694655" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
